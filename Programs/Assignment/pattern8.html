@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern 3</title>
+    <script>
+        function patt() {
+            let a = "";
+            let col = Number(document.getElementById("col").value); //Input should be 1
+            let row = Number(document.getElementById("row").value); //Input 5
+            for (i = 0; i < row; i++) {
+                for (j = 0; j < col; j++) {
+                    a += "*";
+
+                }
+                a += "\n";
+                col += 1
+            }
+            console.log(a)
+            document.getElementById("result").innerText = a
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Coloumns <br><input type="text" placeholder="Number of coloumns" id="col"><br>
+        Rows <br><input type="text" placeholder="Number of rows" id="row"><br><br>
+        <input type="button" value="Result" onclick="patt()">
+        <p id="result">Result is</p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Store data in Array format</title>
+    <script>
+      var arr = [];
+      var i = 0;
+      function out1() {
+        function Person(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        let name1 = document.getElementById("name").value;
+        let age1 = document.getElementById("age").value;
+        let obj = new Person(name1, age1);
+
+        let sArr = [Object.values(obj)];
+
+        arr[i] = sArr;
+        i += 1;
+        console.log(arr);
+      }
+      function cal() {
+        let ind = document.getElementById("index").value;
+        let disArr = arr[ind];
+        document.getElementById("res").innerHTML = disArr;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" />
+      <label for="age">Age:</label>
+      <input type="number" id="age" /><br /><br />
+      <input type="button" value="Add" onclick="out1()" /><br /><br />
+      <input
+        type="number"
+        id="index"
+        placeholder="Enter index number of array"
+      />
+      <input type="button" value="Display Array" onclick="cal()" />
+    </form>
+    <form>
+      <br />
+      <output id="res"></output>
+    </form>
+  </body>
+</html>

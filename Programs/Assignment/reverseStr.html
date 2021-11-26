@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reverse</title>
+    <script>
+        function rev() {
+            let str = document.getElementById("val").value
+            let revstr = ""
+            for (let i = str.length - 1; i >= 0; i--) {
+                revstr += str[i]
+            }
+            document.getElementById("result").innerHTML = "The reverse of " + str + " is " + revstr
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Input anything and get reverse result of what you entered</h1>
+    <input type="text" placeholder="Enter any value" id="val">
+    <input type="button" value="Result" onclick="rev()">
+    <h3 id="result">Result is shown here</h3>
+</body>
+
+</html>

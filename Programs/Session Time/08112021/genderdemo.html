@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total persons</title>
+    <script>
+        function te() {
+            var allgender = document.getElementsByName("gender")
+            alert("Total Genders:" + allgender.length)
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Male: <input type="radio" name="gender" value="Male">
+        Female: <input type="radio" name="gender" value="Female">
+        <input type="button" onclick="te()" value="Total Genders">
+    </form>
+
+</body>
+
+</html>

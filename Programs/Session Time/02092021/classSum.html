@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum of two numbers using class</title>
+    <script>
+      class Operation {
+        constructor(val1, val2) {
+          this.a = val1;
+          this.b = val2;
+        }
+        sum() {
+          /*  this.a = Number(document.getElementById("a").value);
+          this.b = Number(document.getElementById("b").value); */
+          var res = this.a + this.b;
+          document.getElementById(
+            "res"
+          ).innerHTML = `Sum of ${this.a} and ${this.b} is ${res}`;
+        }
+        sub() {
+          var res1 = this.a - this.b;
+          document.getElementById(
+            "res"
+          ).innerHTML = `Subtraction of ${this.a} and ${this.b} is ${res1}`;
+        }
+        mul() {
+          var res2 = this.a * this.b;
+          document.getElementById(
+            "res"
+          ).innerHTML = `Multiplication of ${this.a} and ${this.b} is ${res2}`;
+        }
+        div() {
+          var res3 = this.a / this.b;
+          document.getElementById(
+            "res"
+          ).innerHTML = `Division of ${this.a} and ${this.b} is ${res3}`;
+        }
+      }
+      function cal() {
+        var a = Number(document.getElementById("a").value);
+        var b = Number(document.getElementById("b").value);
+        var obj1 = new Operation(a, b);
+      }
+      /* function sum1() {
+        var a = Number(document.getElementById("a").value);
+        var b = Number(document.getElementById("b").value);
+        var obj1 = new Operation(a, b);
+        obj1.sum();
+      }
+      function sub1() {
+        var a = Number(document.getElementById("a").value);
+        var b = Number(document.getElementById("b").value);
+        var obj1 = new Operation(a, b);
+        obj1.sub();
+      }
+      function mul1() {
+        var a = Number(document.getElementById("a").value);
+        var b = Number(document.getElementById("b").value);
+        var obj1 = new Operation(a, b);
+        obj1.mul();
+      }
+      function div1() {
+        var a = Number(document.getElementById("a").value);
+        var b = Number(document.getElementById("b").value);
+        var obj1 = new Operation(a, b);
+        obj1.div();
+      } */
+    </script>
+  </head>
+
+  <body>
+    <form>
+      <label for="a">Value of a:</label>
+      <input type="text" id="a" /><br />
+      <label for="b">Value of b:</label>
+      <input type="text" id="b" /><br /><br /><span onkeyup="cal()"></span>
+      <input type="button" value="Add" onclick="obj1.sum()" />
+      <input type="button" value="Subtract" onclick="sub1()" />
+      <input type="button" value="Multiply" onclick="mul1()" />
+      <input type="button" value="Division" onclick="div1()" />
+    </form>
+    <h2 id="res">Result is shown here</h2>
+  </body>
+</html>

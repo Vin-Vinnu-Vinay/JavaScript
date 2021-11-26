@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greatest of two</title>
+  <script>
+    function great() {
+      var a = Number(document.getElementById("a").value);
+      var b = Number(document.getElementById("b").value);
+      var c = Number(document.getElementById("c").value);
+      if (a > b && a > c) {
+        document.getElementById("Result").innerHTML =
+          "<h3 style = color:blue>Result: " +
+          "a is greater than b and c" +
+          "</h3>";
+      } else if (b > a && b > c) {
+        document.getElementById("Result").innerHTML =
+          "<h3 style = color:blue>Result: " +
+          "b is greater than a and c" +
+          "</h3>";
+      } else {
+        document.getElementById("Result").innerHTML =
+          "<h3 style=color:blue>Result: " +
+          "c is greater than a and b" +
+          "</h3>";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <label for="a">Value of a</label><br />
+    <input type="number" id="a" value="Enter value of a " /><br />
+    <label for="b">Value of b</label><br />
+    <input type="number" id="b" value="Enter value of b " /><br />
+    <label for="c">Value of c</label><br />
+    <input type="number" id="c" value="Enter value of c " /><br />
+    <input type="button" value="Submit" onclick="great()" /><br />
+    <p id="Result">Result is shown here</p>
+  </form>
+</body>
+
+</html>

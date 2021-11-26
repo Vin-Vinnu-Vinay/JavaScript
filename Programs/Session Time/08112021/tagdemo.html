@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag demo</title>
+    <script>
+        function counth2() {
+            var th2 = document.getElementsByTagName("h2");
+            alert("Total h2 tags are " + th2.length);
+        }
+        function counth3() {
+            var th3 = document.getElementsByTagName("h3");
+            alert("Total h3 tags are " + th3.length);
+        }
+    </script>
+</head>
+
+<body>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h3>2</h3>
+    <h3>2</h3>
+    <h3>2</h3>
+    <h3>2</h3>
+    <h3>2</h3>
+    <h3>2</h3>
+    <button onclick="counth2()">H2</button>
+    <button onclick="counth3()">H3</button>
+</body>
+
+</html>

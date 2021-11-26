@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <script>
+        function validate() {
+            let name = document.forms[0].name.value
+            let password = document.forms[1].pw.value
+            if (name == null || name == "") {
+                alert("Name cannot be left blank");
+                return false;
+            }
+            else if (password.length < 6) {
+                alert("Password must contain atleast 6 characters");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="vinay.net" onsubmit="validate()">
+        Name: <input type="text" name="name"></form>
+    <form> Password: <input type="password" name="pw">
+        <input type="button" value="Submit" onclick="validate()">
+    </form>
+
+</body>
+
+</html>

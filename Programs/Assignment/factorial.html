@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>factorial of a number</title>
+    <script>
+        function fact() {
+            num = Number(document.getElementById("num").value);
+            if (num < 0) {
+                alert("Please enter positive number");
+            } else if (num == 0) {
+                document.getElementById("Result").innerHTML =
+                    "<b> Factorial of " + num + " is " + "1" + ". </b>";
+            } else {
+                n = 1;
+                for (i = 1; i <= num; i++) {
+                    n *= i;
+                }
+                document.getElementById("Result").innerHTML =
+                    "<b> Factorial of " + num + " is " + n + ". </b>";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <label for="num">Enter a number</label>
+    <input type="number" id="num" /><br />
+    <input type="button" value="Submit" onclick="fact()" />
+    <p id="Result"></p>
+</body>
+
+</html>

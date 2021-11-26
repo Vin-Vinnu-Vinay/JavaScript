@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        function sum() {
+            var a = document.getElementById("arr").value;
+            var arr = a.split(" ");
+            var y = 0;
+            for (x in arr) {
+                y += Number(arr[x]);
+
+            }
+            document.getElementById("result").innerHTML = y
+        }
+    </script>
+</head>
+
+<body>
+    Enter numbers:<input type="text" id="arr"><br>
+    <input type="button" value="Add" onclick="sum()"><br>
+    <p id="result">Result is</p>
+</body>
+
+</html>

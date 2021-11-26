@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #personsList {
+        width: 300px;
+        height: 300px;
+        padding: 2px 2px 2px 2px;
+        border: 1px solid red;
+      }
+
+      /* #header {
+        background-color: bisque;
+        color: blueviolet;
+        padding: 20px;
+        text-align: center;
+      } */
+    </style>
+    <script src="./prototype.js"></script>
+    <script src="./prototype1.js"></script>
+  </head>
+
+  <body>
+    <h1
+      style="background-color: maroon;color:white;padding: 20px;text-align: center;"
+    >
+      Example for prototype pattern using person data
+    </h1>
+    <div align="center">
+      <table>
+        <tr>
+          <td><label>Enter Name:</label></td>
+          <td><input type="text" id="name" placeholder="Enter name" /></td>
+        </tr>
+        <tr>
+          <td><label>Enter Age:</label></td>
+          <td><input type="text" id="age" placeholder="Enter age" /></td>
+        </tr>
+        <tr>
+          <td><label>Enter Contact number:</label></td>
+          <td>
+            <input
+              type="number"
+              id="contact"
+              placeholder="Enter mobile number"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label>Enter Email ID:</label></td>
+          <td><input type="text" id="email" placeholder="Enter mail ID" /></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="centre">
+            <button id="add" onclick="addPerson()">Add Person</button>
+          </td>
+        </tr>
+      </table>
+
+      <div align="center">
+        <span align="center">Last error is:</span>
+        <label id="error">No error</label>
+      </div>
+    </div>
+    <div align="center">
+      <br />
+      <h2>Get persons list so far along with today horoscope</h2>
+      <label>Enter age:</label>
+      <input type="number" id="nameCondition" placeholder="Enter 0 for all" />
+      <button id="nameConditionBrn" onclick="getByAgeCondition()">Get</button>
+      <p id="personsList">empty</p>
+    </div>
+  </body>
+</html>

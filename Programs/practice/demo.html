@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // function add() {
+      //   console.log(2 + 3);
+      // }
+      function debounce(func, timeout = 1000) {
+        let timer;
+        return (...args) => {
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            func.apply(this, args);
+          }, timeout);
+        };
+      }
+      function saveInput() {
+        console.log("Saving data");
+      }
+      const processChange = debounce(() => saveInput());
+
+      // add();
+    </script>
+  </head>
+  <body>
+    <button onclick="processChange()">Click</button>
+    <!-- <h3>Working on date field</h3>
+    <label for="dob">D.O.B</label> <br />
+    <input type="text" id="dob" /> -->
+  </body>
+</html>

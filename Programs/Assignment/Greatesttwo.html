@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greatest of two</title>
+  <script>
+    function great() {
+      var a = Number(document.getElementById("a").value);
+      var b = Number(document.getElementById("b").value);
+      if (a > b) {
+        document.getElementById("Result").innerHTML =
+          "<h3 style = color:blue>Result: " + "a is greater than b" + "</h3>";
+      } else {
+        document.getElementById("Result").innerHTML =
+          "<h3 style = color:blue>Result: " + "b is greater than a" + "</h3>";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <label for="a">Value of a</label>
+    <input type="number" id="a" placeholder="Enter value of a " /><br />
+    <label for="b">Value of b</label>
+    <input type="number" id="b" placeholder="Enter value of b " /><br />
+    <input type="button" value="Submit" onclick="great()" /><br />
+    <p id="Result">Result is shown here</p>
+  </form>
+</body>
+
+</html>

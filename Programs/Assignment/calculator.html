@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate two numbers</title>
+    <script>
+      function Add() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var sum = num1 + num2;
+        document.getElementById("Result").innerHTML =
+          "<h3 style = color:blue>Result is " + sum + "</h3>";
+      }
+
+      function Sub() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var sum = num1 - num2;
+        document.getElementById("Result").innerHTML =
+          "<h3 style = color:blue>Result is " + sum + "</h3>";
+      }
+
+      function Mul() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var sum = num1 * num2;
+        document.getElementById("Result").innerHTML =
+          "<h3 style = color:blue>Result is " + sum + "</h3>";
+      }
+
+      function Div() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var sum = num1 / num2;
+        document.getElementById("Result").innerHTML =
+          "<h3 style = color:blue>Result is " + sum + "</h3>";
+      }
+    </script>
+  </head>
+
+  <body>
+    <label for="num1">Value of num1 is</label><br />
+    <input type="number" id="num1" /><br />
+    <label for="num2">Value of num2 is</label><br />
+    <input type="number" id="num2" /><br />
+
+    <input type="button" onclick="Add()" value="Add" />
+    <input type="button" onclick="Sub()" value="Subtract" />
+    <input type="button" onclick="Mul()" value="Multiplication" />
+    <input type="button" onclick="Div()" value="Division" />
+
+    <p id="Result">Result will be shown here</p>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Demo</title>
+    <script>
+        function DOM() {
+            var mname = (document.getElementById("mname").value).toUpperCase()
+            switch (mname) {
+                case 'JAN':
+                case 'MAR':
+                case 'MAY':
+                case 'JUL':
+                case 'AUG':
+                case 'OCT':
+                case 'DEC':
+                    document.getElementById('result').innerHTML = mname + " has 31 days"
+                    break;
+                case 'FEB':
+                    document.getElementById('result').innerHTML = mname + " has 28 days"
+                    break;
+                case 'APR':
+                case 'JUN':
+                case 'SEP':
+                case 'NOV':
+                    document.getElementById('result').innerHTML = mname + " has 30 days"
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <p><input type="text" id="mname" placeholder="Month name with first 3 char"></p>
+        <p><input type="button" value="Number of days" onclick="DOM()"></p>
+        <p id="result"></p>
+    </form>
+</body>
+
+</html>

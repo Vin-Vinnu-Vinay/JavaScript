@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Swap three numbers with temporary variable</title>
+    <script>
+      function swap() {
+        a = Number(document.getElementById("a").value);
+        b = Number(document.getElementById("b").value);
+        c = Number(document.getElementById("c").value);
+        d = Number(document.getElementById("d").value);
+        document.getElementById("before").innerHTML =
+          "<b>Value of a is " +
+          a +
+          ", b is " +
+          b +
+          ", c is " +
+          c +
+          " and d is " +
+          d +
+          " before swapping.</b>";
+        a = a + b + c + d;
+        b = a - (b + c + d);
+        c = a - (b + c + d);
+        d = a - (b + c + d);
+        a = a - (b + c + d);
+        document.getElementById("Result").innerHTML =
+          "<b>Value of a is " +
+          a +
+          ", b is " +
+          b +
+          "and c is " +
+          c +
+          " and d is " +
+          d +
+          " after swapping.</b>";
+      }
+    </script>
+  </head>
+  <body>
+    <label for="a">Enter value of a</label>
+    <input type="number" id="a" /><br />
+    <label for="b">Enter value of b</label>
+    <input type="number" id="b" /><br />
+    <label for="c">Enter value of c</label>
+    <input type="number" id="c" /><br />
+    <label for="d">Enter value of d</label>
+    <input type="number" id="d" /><br />
+    <input type="button" value="Swap" onclick="swap()" />
+    <p id="before">before swap</p>
+    <p id="Result">Result is</p>
+  </body>
+</html>

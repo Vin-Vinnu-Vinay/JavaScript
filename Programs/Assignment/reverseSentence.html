@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reverse Sentence</title>
+    <script>
+        function revs() {
+            let sen = document.getElementById("txt").value;
+            let lsen = ""
+            let arrsen = sen.split(" ");
+            let revstr = ""
+            for (i = 0; i < arrsen.length; i++) {
+                let str = arrsen[i];
+                for (j = str.length - 1; j >= 0; j--) {
+                    revstr += str[j];
+                }
+                lsen += revstr + " "
+                revstr = ""
+            }
+            document.getElementById("result").innerHTML = "The reverse of sentence " + "<h3>" + sen + "</h3>" + " is " + "<h3>" + lsen + "</h3>"
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Enter any sentence and output will be reverse of each word with same position</h1>
+    <input type="text" placeholder="Enter any text" id="txt">
+    <input type="button" value="Result" onclick="revs()">
+    <h3 id="result">Result will be shown here</h3>
+</body>
+
+</html>

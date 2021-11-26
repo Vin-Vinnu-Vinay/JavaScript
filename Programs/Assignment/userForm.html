@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Account Opening</title>
+    <style>
+      body {
+        background-color: skyblue;
+        padding-left: 20px;
+      }
+      form {
+        color: black;
+        /* border: 1px solid black;*/
+        padding-left: 15px;
+      }
+
+      /* div {
+            margin: 50px 600px 50px 600px;
+            color: black;
+            background-color: yellow
+        } */
+    </style>
+    <script>
+      function email1() {
+        let emailId = document.getElementById("Email").value;
+        let regex = /^[A-z][A-z0-9\.]+@[A-Za-z-]+[\.][a-z]{3}$/;
+        if (regex.test(emailId)) {
+          document.getElementById("resEI").innerHTML = "&#9989";
+          /* document.getElementById("resEI").style.color = "green";
+          document.getElementById("resEI").style.visibility = "visible"; */
+          return true;
+        } else {
+          document.getElementById("resEI").innerHTML = "&#x274C";
+          /* document.getElementById("resEI").style.color = "red";
+          document.getElementById("resEI").style.visibility = "visible"; */
+          return false;
+        }
+      }
+      function pnum() {
+        let Num1 = document.getElementById("Number1").value;
+        let reg1 = /^[6-9][0-9]{9}$/;
+        if (reg1.test(Num1)) {
+          document.getElementById("res1").innerHTML = "&#9989";
+          /* document.getElementById("res1").style.color = "green";
+          document.getElementById("res1").style.visibility = "visible"; */
+          return true;
+        } else {
+          document.getElementById("res1").innerHTML = "&#x274C";
+          /* document.getElementById("res1").style.color = "red";
+          document.getElementById("res1").style.visibility = "visible"; */
+          return false;
+        }
+      }
+      // function validate() {
+      //   let fname = document.getElementById("uname").value;
+      //   let lname = document.getElementById("pword").value;
+      //   let password1 = document.getElementById("pword1").value;
+      //   let regex = /^[A-Z] [a-z] [0-9]*$ /;
+      //   if (regex.test(username)) {
+      //     continue;
+      //   } else {
+      //     document.getElementById("reg1").innerHTML = "Invalid";
+      //   }
+      // }
+    </script>
+  </head>
+
+  <body>
+    <h1 style="font-family:'Courier New', Courier, monospace">
+      Account Creation
+    </h1>
+    <p style="font-style: italic">* <sup>Required</sup></p>
+    <br />
+    <hr />
+
+    <form>
+      <h3>Personal Details</h3>
+      <label for="firstName">First Name:*</label>
+      <input type="text" required placeholder="Please enter" id="firstName" />
+      <label for="middleName">Middle Name:</label>
+      <input type="text" placeholder="Please enter" id="middleName" />
+      <label for="lastName">Last Name:*</label>
+      <input
+        type="text"
+        required
+        placeholder="Please enter"
+        id="lastName"
+      /><br /><br />
+      <label for="Number1">Mobile No:*</label>
+      <input
+        type="text"
+        required
+        placeholder="Please enter"
+        id="Number1"
+        onkeyup="pnum()"
+      />
+      <label id="res1"></label><br /><br />
+      <label for="Email">Email ID:*</label>
+      <input
+        type="text"
+        required
+        placeholder="Please enter"
+        id="Email"
+        onkeyup="email1()"
+      />
+      <label id="resEI"></label><br /><br />
+      <label for="fName">Father's Name:*</label>
+      <input type="text" required placeholder="Please enter" id="fName" />
+      <label for="mName">Mother's Name:*</label>
+      <input
+        type="text"
+        required
+        placeholder="Please enter"
+        id="mName"
+      /><br /><br />
+      <label for="caddress">Current Address:*</label><br />
+      <textarea required id="caddress" cols="100" rows="2"></textarea
+      ><br /><br />
+      <label for="paddress">Permanent Address:*</label><br />
+      <textarea required id="paddress" cols="100" rows="2"></textarea
+      ><br /><br />
+    </form>
+    <hr />
+  </body>
+</html>

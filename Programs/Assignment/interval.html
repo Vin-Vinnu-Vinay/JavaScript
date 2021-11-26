@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Interval</title>
+    <script>
+      var sec = 0;
+      var ID = 0;
+      function printMsg() {
+        document.getElementById("msg").innerHTML = sec + " seconds";
+        sec++;
+      }
+      function start() {
+        ID = window.setInterval(printMsg, 1000);
+      }
+      function stop() {
+        window.clearInterval(ID);
+      }
+      function reset1() {
+        sec = 0;
+        document.getElementById("msg").innerHTML = sec + " seconds";
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Start" onclick="start()" />
+    <h1 id="msg">Display here</h1>
+    <input type="button" value="Stop" onclick="stop()" />
+    <input type="button" value="Reset" onclick="reset1()" />
+  </body>
+</html>

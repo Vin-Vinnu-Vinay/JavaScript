@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern 6</title>
+    <script>
+        function patt() {
+
+            let col = Number(document.getElementById("col").value);
+            let row = Number(document.getElementById("row").value);
+            let b = ""
+            for (i = 1; i <= row; i++) {
+
+                for (j = 1; j <= col; j++) {
+                    b += j + " "
+
+                }
+                b += "\n";
+
+            }
+            console.log(b)
+            document.getElementById("result").innerText = b
+
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Coloumns <br><input type="text" placeholder="Number of coloumns" id="col"><br>
+        Rows <br><input type="text" placeholder="Number of rows" id="row"><br><br>
+        <input type="button" value="Result" onclick="patt()">
+        <p id="result">Result is</p>
+    </form>
+</body>
+
+</html>

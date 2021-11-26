@@ -1,0 +1,364 @@
+1. The web development environment (JavaScript) offers which standard construct for data validation of the input entered by the user.
+a) Controlled loop constructs
+b) Server page access
+c) Client side Event
+d) Permit server-side
+
+Ans)Option C
+
+
+
+2. The main purpose of a “Live Wire” in NetScape is to ________
+a) Create linkage between client side and server side
+b) Permit server side, JavaScript code, to connect to RDBMS
+c) Support only non relational database
+d) To interpret JavaScript code
+
+Ans)Option C
+
+
+3. The script tag must be placed in __________
+a) the head tag
+b) the head or body
+c) the title or head
+d) after the body tag
+
+Ans)Option B
+
+
+
+4. A JavaScript program developed on a Unix Machine ________
+a) will throw errors and exceptions
+b) must be restricted to a Unix Machine only
+c) will work perfectly well on a Windows Machine
+d) will be displayed as a JavaScript text on the browser
+
+Ans)Option C
+
+
+5. JavaScript is ideal to ________
+a) make computations in HTML simpler
+b) minimize storage requirements on the web server
+c) increase the download time for the client
+d) increase the loading time of the website
+
+Ans)Option A
+
+
+
+6. Which attribute is used to specify that the script is executed when the page has finished parsing? (only for external scripts)
+a) parse
+b) a sync
+c) defer
+d) type
+
+Ans)Option A
+
+
+7. JavaScript Code can be called by using ____________
+a) RMI
+b) Triggering Event
+c) Preprocessor
+d) Function/Method
+
+Ans)Option B
+
+
+8. JavaScript can be written __________
+a) directly into JS file and included into HTML
+b) directly on the server page
+c) directly into HTML pages
+d) directly into the css file
+
+
+Ans)Option A
+
+
+
+9. Which of the following Attribute is used to include External JS code inside your HTML Document?
+a) src
+b) ext
+c) script
+d) link
+
+Ans)Option A
+
+
+
+10. A proper scripting language is a __________
+a) High level programming language
+b) Assembly level programming language
+c) Machine level programming language
+d) Low level programming language
+
+Ans)Option A
+
+
+
+11. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+var txt1 = "good";
+var txt2 = "day";
+document.getElementById("demo").innerHTML = txt1 + txt2;
+a) good day
+b) goodday
+c) error
+d) undefined
+
+Ans)Option B
+
+
+12. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+var x = 5;
+var y = 2;
+var z = x % y;
+document.getElementById("demo").innerHTML = z;
+</script>
+a) 0
+b) 1
+c) 2
+d) 5
+
+Ans)Option B
+
+
+
+13. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+var x = 10;
+x *= 5;
+document.getElementById("demo").innerHTML = x;
+</script>
+a) 5
+b) 10
+c) 50
+d) Error
+
+Ans)Option C
+
+
+
+14. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+txt1 = “ one”;
+txt1 += “two”;
+document.getElementById("demo").innerHTML = txt1;
+</script>
+a) onetwo
+b) one two
+c) error
+d) undefined
+
+Ans)Option A
+
+
+
+15. What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = typeof "John" 
+</script>
+a) integer
+b) number
+c) string
+d) error
+
+Ans)Option C
+
+
+
+16. JavaScript Code can be called by using ___________
+a) RMI
+b) Triggering Event
+c) Preprocessor
+d) Function/Method
+
+Ans)Option B
+
+
+17. The type of a variable that is volatile is _______________
+a) Volatile variable
+b) Mutable variable
+c) Immutable variable
+d) Dynamic variable
+
+Ans)Option B
+
+
+18. A hexadecimal literal begins with __________
+a) 00
+b) 0x
+c) 0X
+d) Both 0x and 0X
+
+Ans)Option D
+
+
+19. The generalised syntax for a real number representation is __________
+a) [digits][.digits][(E|e)[(+|-)]digits]
+b) [digits][+digits][(E|e)[(+|-)]digits]
+c) [digits][(E|e)[(+|-)]digits]
+d) [.digits][digits][(E|e)[(+|-)]digits]
+
+Ans)
+
+
+
+20. JavaScript _________ when there is an indefinite or an infinite value during an arithmetic computation.
+a) Prints an exception error
+b) Prints an overflow error
+c) Displays “Infinity”
+d) Prints the value as such
+
+Ans)Option C
+
+
+
+21. Which of the following is not considered as an error in JavaScript?
+a) Syntax error
+b) Missing of semicolons
+c) Division by zero
+d) Missing of Bracket
+
+Ans)Option C
+
+
+
+22. The escape sequence ‘\f’ stands for _________
+a) Floating numbers
+b) Representation of functions that returns a value
+c) \f is not present in JavaScript
+d) Form feed
+
+Ans)Option D
+
+
+23. The snippet that has to be used to check if “a” is not equal to “null” is _________
+a) if(a!=null)
+b) if (!a)
+c) if(a!null)
+d) if(a!==null)
+
+Ans)Option D
+
+
+
+24. The statement a===b refers to _________
+a) Both a and b are equal in value, type and reference address
+b) Both a and b are equal in value
+c) Both a and b are equal in value and type
+d) There is no such statement
+
+Ans)Option D
+
+
+
+25 Assume that we have to convert “false” that is a non-string to string. The command that we use is (without invoking the “new” operator).
+a) false.toString()
+b) String(false)
+c) String newvariable=”false”
+d) Both false.toString() and String(false)
+
+Ans)Option D
+
+
+
+26. What will be the output of the following JavaScript code?
+
+function compare()
+{
+    int num=2;
+    char b=2;
+    if(a==b)
+        return true;
+    else
+        return false;
+}
+a) true
+b) false
+c) runtime error
+d) compilation error
+
+Ans)Option D
+
+
+
+27. What will be the output of the following JavaScript code?
+
+function equalto()
+{
+    int num=10;
+    if(num===”10”)
+        return true;
+    else
+        return false;
+}
+a) true
+b) false
+c) runtime error
+d) compilation error
+
+
+Ans)Option D
+
+
+
+28. What will be the output of the following JavaScript code?
+
+function compare()
+{
+    int a=1;
+    char b=1;
+    if(a.tostring()===b)
+        return true;
+    else 
+        return false;
+}
+a) true
+b) false
+c) runtime error
+d) logical error
+
+
+Ans)Compilation error
+
+
+29. What will be the output of the following JavaScript code?
+
+int a==2;
+int b=4;
+int ans=a+b;
+print(ans);
+a) 2
+b) 6
+c) 0
+d) error
+
+
+Ans)Option D
+
+
+30. What will be the output of the following JavaScript code?
+
+int a=1;
+if(a!=null)
+    return 1;
+else
+    return 0;
+a) 1
+b) 0
+c) runtime error
+d) compiler error
+
+
+Ans)Option D
+

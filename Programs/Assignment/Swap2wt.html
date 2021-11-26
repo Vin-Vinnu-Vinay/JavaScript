@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swaping Numbers without a temporary variable</title>
+    <script>
+      function swap() {
+        a = Number(document.getElementById("a").value);
+        b = Number(document.getElementById("b").value);
+        document.getElementById("before").innerHTML =
+          "Value of a is " + a + " and b is " + b + " before swapping<br>";
+        x = a;
+        a = b;
+        b = x;
+        document.getElementById("Result").innerHTML =
+          "Value of a is " + a + " and b is " + b + " after swapping <br>";
+      }
+    </script>
+  </head>
+
+  <body>
+    <form>
+      <label for="a">Value of a</label><br />
+      <input type="number" placeholder="enter a" id="a" /><br />
+      <label for="b">Value of b</label><br />
+      <input type="number" placeholder="enter b" id="b" /><br /><br />
+      <input type="button" value="Submit" onclick="swap()" /><br />
+      <p id="before">Before swapping</p>
+      <br />
+      <p id="Result">After swapping</p>
+    </form>
+    <h1 style="background-color:yellow;color: #0000ff;">
+      <marquee>
+        "Above is solution after swaping values without temporary
+        variable"</marquee
+      >
+    </h1>
+  </body>
+</html>

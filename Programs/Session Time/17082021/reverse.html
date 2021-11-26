@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse method</title>
+    <script>
+        var obj = {
+            strrev: function (name) {
+                let str = "";
+                for (let i = name.length - 1; i >= 0; i--) {
+                    str += name.charAt(i);
+                }
+                return str;
+            }
+        }
+        function getrev() {
+            var num = document.getElementById("str");
+            myname = String(num.value);
+            document.getElementById("result").innerHTML = obj.strrev(myname);
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Enter a name</h1>
+        <input type="text" id="str">
+        <button id="reverse" onclick="getrev()">Reverse</button>
+        <div>
+            <span>Sentence reverse is:</span>
+            <label id="result"></label>
+        </div>
+    </div>
+</body>
+
+</html>

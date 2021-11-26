@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product of Array</title>
+    <script>
+        function getProd() {
+            let inp = document.getElementById("arr1").value
+            let arr = inp.trim();
+            arr = arr.split(" ");
+            let n = [];
+            for (var i = 0; i < arr.length; i++) {
+                n[i] = Number(arr[i]);
+            }
+            let prodResult1 = n.reduce(function (prod, val) { return prod * val; }, 1) //((prod, val)=> prod*val)
+            let prodResultElement = document.getElementById("prodResult").innerHTML = prodResult1
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Example for array manipulation</h1>
+        <p>Enter list of array elements separated by space</p>
+        <input type="text" id="arr1" style="width: 400px;">
+    </div>
+    <div>
+        <button id="product" onclick="getProd()">Get product of numbers</button>
+        <label id="prodResult">Empty</label>
+    </div>
+</body>
+
+</html>

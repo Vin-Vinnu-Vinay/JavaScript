@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Store data in Array format</title>
+    <script>
+      function out1() {
+        function Person(name, age) {
+          this.name = name;
+          this.age = age;
+          this.describe = () => {
+            document.getElementById(
+              "res"
+            ).innerHTML = `My name is ${obj.name}. I am ${obj.age}.`;
+          };
+        }
+        let name1 = document.getElementById("name").value;
+        let age1 = document.getElementById("age").value;
+        let obj = new Person(name1, age1);
+        obj.describe();
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" />
+      <label for="age">Age:</label>
+      <input type="number" id="age" /><br /><br />
+      <input type="button" value="Enter" onclick="out1()" />
+    </form>
+    <form>
+      <br />
+      <output id="res">Result</output>
+    </form>
+  </body>
+</html>

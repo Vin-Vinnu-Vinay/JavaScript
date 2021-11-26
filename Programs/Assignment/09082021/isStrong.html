@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript to check Strong number or not!</title>
+    <script >
+        function strongNumber() {
+
+            var num = document.getElementById('num').value;
+            sum = 0;
+            r = 0;
+            temp = num;
+
+            while (num) {
+
+                i = 1;
+                fact = 1;
+
+                r = num % 10;
+
+                while (i <= r) {
+                    fact = fact * i;
+                    i++;
+                }
+
+                sum = sum + fact;
+                num = Math.floor(num / 10);
+            }
+
+            if (temp == sum) {
+                document.getElementById('result').innerHTML = "<b>Result:</b> Strong Number";
+            } else {
+                document.getElementById('result').innerHTML = "<b>Result:</b> Not a Strong Number";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <label for="num">Number:</label>
+    <input type="text" class="form-control" id="num" required>
+
+    <button type="submit" name="submit" onclick="strongNumber()" class="btn btn-default">Submit</button>
+
+    <div id="result"></div>
+</body>
+
+</html>

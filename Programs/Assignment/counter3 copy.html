@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Counters</title>
+    <script>
+        function counter() {
+            let counter1 = Number(document.getElementById("c1").value)
+            let counter2 = Number(document.getElementById("c2").value)
+            let counter3 = Number(document.getElementById("c3").value)
+            let lobby = Number(document.getElementById("lobby").value)
+            let con1 = ""
+            let con2 = ""
+            let con3 = ""
+            if (counter1 > 10 || counter2 > 10 || counter3 > 10 || counter1 < 0 || counter2 < 0 || counter3 < 0 || lobby < 0) {
+                alert("Invalid input, please check before you submit")
+            }
+
+            if (counter1 == 10) {
+                document.getElementById("co1").innerHTML = "Counter1 is full"
+            }
+            else {
+                for (i = counter1; i < 10; i++) {
+                    con1 += i + ", "
+                }
+                document.getElementById("co1").innerHTML = "In Counter1 slots " + con1 + " are empty."
+            }
+            if (counter2 == 10) {
+                document.getElementById("co2").innerHTML = "Counter2 is full"
+            }
+            else {
+                for (i = counter2; i < 10; i++) {
+                    con2 += i + ", "
+                }
+                document.getElementById("co2").innerHTML = "In Counter2 slots " + con1 + " are empty."
+            }
+            if (counter3 == 10) {
+                document.getElementById("co3").innerHTML = "Counter3 is full"
+            }
+            else {
+                for (i = counter3; i < 10; i++) {
+                    con3 += i + ", "
+                }
+                document.getElementById("co3").innerHTML = "In Counter3 slots " + con1 + " are empty."
+            }
+            if (lobby == 0) {
+                document.getElementById("lob").innerHTML = "Lobby is empty"
+            }
+            else {
+                document.getElementById("lob").innerHTML = "There are still " + lobby + " members are waiting."
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Assume this as a Ticket Counter</h1>
+    Counter 1: <br><input type="number" placeholder="Enter a value" id="c1"><br><br>
+    Counter 2: <br><input type="number" placeholder="Enter a value" id="c2"><br><br>
+    Counter 3: <br><input type="number" placeholder="Enter a value" id="c3"><br><br>
+    Lobby: <br><input type="number" placeholder="Enter a value" id="lobby"><br><br>
+    <input type="button" onclick="counter()" value="Submit"><br><br>
+    <h2 id="co1"></h2>
+    <h2 id="co2"></h2>
+    <h2 id="co3"></h2>
+    <h2 id="lob"></h2>
+</body>
+
+</html>

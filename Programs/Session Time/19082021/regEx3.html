@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions to replace a string</title>
+    <script>
+        function regx() {
+            let sent = document.getElementById("result").innerHTML;
+            let word = sent.replace("weak", "powerful")
+            document.getElementById("result").innerHTML = word
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="Search" onclick="regx()"><br>
+    <p id="result">Vinay is very weak.</p>
+
+</html>

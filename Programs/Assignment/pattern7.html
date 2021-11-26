@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Floyd's Triangle</title>
+    <script>
+        function patt() {
+            let col = Number(document.getElementById("col").value) // enter 1
+            let row = Number(document.getElementById("row").value) // enter any number
+            let pat = ""
+            let a = 1
+            for (i = 0; i < row; i++) {
+                for (j = 0; j < col; j++) {
+                    pat = pat + " " + a
+                    a += 1
+                }
+                pat += "\n"
+
+                col += 1
+            }
+            document.getElementById("result").innerText = pat
+        }
+    </script>
+</head>
+
+<body>
+    Enter col: <input type="number" id="col">
+    Enter row: <input type="number" id="row">
+    <input type="button" value="Result" onclick="patt()">
+    <p id="result">Pattern is</p>
+</body>
+
+</html>
